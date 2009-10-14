@@ -1,5 +1,12 @@
 #HANG Feifei's work log.
 
+= 18.27PM, 10/14/2009 =
+0. Replace all JPanel extended class with JFrame to enable API of dispose().
+
+1. Build project with Java Wb Start under the requirements in assignment's documentation.
+
+_Updated by: HANG Feifei_
+
 = 16.28PM, 10/14/2009 =
 Air Booking System, daily built 2009.10.14.16.24
 Components completed:
@@ -15,12 +22,5 @@ A2. Booking Screem;
 A3. MainUI Frame;
 
 A4. Testing class/program.
-
-_Updated by: HANG Feifei_
-
-= 18.27PM, 10/14/2009 =
-0. Replace all JPanel extended class with JFrame to enable API of dispose().
-
-1. Build project with Java Wb Start under the requirements in assignment's documentation.
 
 _Updated by: HANG Feifei_
