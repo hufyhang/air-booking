@@ -1,0 +1,13 @@
+#HANG Feifei's work log.
+
+= 16.28PM, 10/14/2009 =
+==Air Booking System, daily built 2009.10.14.16.24==
+===Components completed:===
+*A.*Basic views
+	*0.* Welcome Screen;
+	*1.* Sign-up Screen;
+	*2.* Booking Screem;
+	*3.* MainUI Frame;
+	*4.* Testing class/program.
+
+_Updated by: *HANG Feifei*_
