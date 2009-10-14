@@ -5,10 +5,15 @@ Air Booking System, daily built 2009.10.14.16.24
 Components completed:
 
 A. Basic views:
+
 A0. Welcome Screen;
+
 A1. Sign-up Screen;
+
 A2. Booking Screem;
+
 A3. MainUI Frame;
+
 A4. Testing class/program.
 
 _Updated by: HANG Feifei_
