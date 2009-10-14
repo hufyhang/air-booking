@@ -19,10 +19,7 @@ public class Main extends JFrame {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        view.MainUI mainUI = new view.MainUI(new view.Welcome());
-        mainUI.pack();
-        mainUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mainUI.setVisible(true);
+        view.MainUI mainUI = new view.MainUI(new view.WelcomeScreen());
     }
 
 }
