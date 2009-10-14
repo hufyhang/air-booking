@@ -4,9 +4,9 @@
  */
 
 /*
- * Booking.java
+ * BookingScreen.java
  *
- * Created on Oct 14, 2009, 2:56:56 PM
+ * Created on Oct 14, 2009, 6:05:55 PM
  */
 
 package view;
@@ -15,10 +15,11 @@ package view;
  *
  * @author HANG Feifei
  */
-public class Booking extends javax.swing.JPanel {
+public class BookingScreen extends javax.swing.JFrame {
 
-    /** Creates new form Booking */
-    public Booking() {
+    /** Creates new form BookingScreen */
+    public BookingScreen() {
+        super("Booking air tickets...");
         initComponents();
     }
 
@@ -31,88 +32,64 @@ public class Booking extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
-        jLabel3 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
-        jLabel5 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
-        jLabel9 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox();
+        jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel11 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jSpinner1 = new javax.swing.JSpinner();
         jSpinner2 = new javax.swing.JSpinner();
         jLabel12 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox();
+        jComboBox1 = new javax.swing.JComboBox();
+        jComboBox3 = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("宋体", 0, 18));
-        jLabel1.setText("Departure:");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("宋体", 0, 18));
-        jLabel2.setText("Destination:");
+        jTextField2.setEditable(false);
+        jTextField2.setFont(new java.awt.Font("宋体", 0, 18));
+        jTextField2.setText("jTextField2");
 
-        jComboBox1.setFont(new java.awt.Font("宋体", 0, 18));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jTextField1.setEditable(false);
+        jTextField1.setFont(new java.awt.Font("宋体", 0, 18));
+        jTextField1.setText("jTextField1");
 
-        jComboBox2.setFont(new java.awt.Font("宋体", 0, 18));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 18));
-        jLabel3.setText("Air Tickets Booking");
-
-        jLabel4.setFont(new java.awt.Font("宋体", 0, 18));
-        jLabel4.setText("Available Date:");
-
-        jComboBox3.setFont(new java.awt.Font("宋体", 0, 18));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel5.setFont(new java.awt.Font("宋体", 0, 18));
-        jLabel5.setText("Class:");
-
-        jComboBox4.setFont(new java.awt.Font("宋体", 0, 18));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "First Class", "Business Class", "Economy Class" }));
-
-        jLabel6.setFont(new java.awt.Font("宋体", 1, 18));
-        jLabel6.setText("Welcome, ");
-
-        jLabel7.setFont(new java.awt.Font("宋体", 0, 18));
-        jLabel7.setText("Number of adults:");
-
-        jLabel8.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
-        jLabel8.setText("Number of children:");
+        jLabel10.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel10.setText("GST:");
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         jLabel9.setFont(new java.awt.Font("宋体", 0, 18));
         jLabel9.setText("Airport Tax:");
 
-        jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
-        jTextField1.setText("jTextField1");
+        jLabel7.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel7.setText("Number of adults:");
 
-        jLabel10.setFont(new java.awt.Font("宋体", 0, 18));
-        jLabel10.setText("GST:");
+        jLabel8.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel8.setText("Number of children:");
 
-        jTextField2.setEditable(false);
-        jTextField2.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
-        jTextField2.setText("jTextField2");
+        jComboBox4.setFont(new java.awt.Font("宋体", 0, 18));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "First Class", "Business Class", "Economy Class" }));
 
-        jLabel11.setFont(new java.awt.Font("宋体", 0, 18));
-        jLabel11.setText("Promotion:");
+        jLabel6.setFont(new java.awt.Font("宋体", 1, 18)); // NOI18N
+        jLabel6.setText("Welcome, ");
 
         jTextArea1.setColumns(20);
         jTextArea1.setEditable(false);
@@ -120,29 +97,65 @@ public class Booking extends javax.swing.JPanel {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jLabel11.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel11.setText("Promotion:");
+
         jButton1.setText("Reset");
 
         jButton2.setText("Confirm");
 
-        jSpinner1.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jSpinner1.setFont(new java.awt.Font("宋体", 0, 18));
 
-        jSpinner2.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jSpinner2.setFont(new java.awt.Font("宋体", 0, 18));
 
-        jLabel12.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("宋体", 0, 18));
         jLabel12.setText("Total cost:");
 
         jTextField3.setEditable(false);
-        jTextField3.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("宋体", 0, 18));
         jTextField3.setText("jTextField3");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        jLabel2.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel2.setText("Destination:");
+
+        jLabel1.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel1.setText("Departure:");
+
+        jLabel5.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel5.setText("Class:");
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel3.setText("Air Tickets Booking");
+
+        jComboBox2.setFont(new java.awt.Font("宋体", 0, 18));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox1.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox3.setFont(new java.awt.Font("宋体", 0, 18));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel4.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel4.setText("Available Date:");
+
+        jButton3.setText("Cancel");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 646, Short.MAX_VALUE)
+            .addGap(0, 646, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -173,34 +186,39 @@ public class Booking extends javax.swing.JPanel {
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel10))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)))
                             .addComponent(jLabel11)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE))))
+                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 340, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)))
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
+                    .addComponent(jButton3)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -253,14 +271,32 @@ public class Booking extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator2)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    /**
+    * @param args the command line arguments
+    */
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new BookingScreen().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;

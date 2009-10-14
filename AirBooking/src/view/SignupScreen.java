@@ -4,9 +4,9 @@
  */
 
 /*
- * Signup.java
+ * SignupScreen.java
  *
- * Created on Oct 14, 2009, 1:11:36 PM
+ * Created on Oct 14, 2009, 6:07:32 PM
  */
 
 package view;
@@ -15,10 +15,11 @@ package view;
  *
  * @author HANG Feifei
  */
-public class Signup extends javax.swing.JPanel {
+public class SignupScreen extends javax.swing.JFrame {
 
-    /** Creates new form Signup */
-    public Signup() {
+    /** Creates new form SignupScreen */
+    public SignupScreen() {
+        super("Sign up...");
         initComponents();
     }
 
@@ -32,47 +33,39 @@ public class Signup extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jPasswordField2 = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jTextField2 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jButton3 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel1.setText("Create an account...");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
-        jLabel2.setText("Username:");
+        jButton2.setText("Submit");
 
-        jLabel3.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
-        jLabel3.setText("Password:");
-
-        jLabel4.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
-        jLabel4.setText("Re-confirm:");
-
-        jLabel5.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("宋体", 0, 18));
         jLabel5.setText("E-mail:");
 
-        jLabel6.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("宋体", 0, 18));
         jLabel6.setText("Gender:");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Male");
+        jLabel3.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel3.setText("Password:");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Female");
+        jLabel4.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel4.setText("Re-confirm:");
 
         jButton1.setText("Clear");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,41 +74,64 @@ public class Signup extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setText("Submit");
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14));
+        jLabel1.setText("Create an account...");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("Female");
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setSelected(true);
+        jRadioButton1.setText("Male");
+
+        jLabel2.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel2.setText("Username:");
+
+        jButton3.setText("Cancel");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton2))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField2)
-                                .addComponent(jPasswordField2)
-                                .addComponent(jPasswordField1)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))))
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                            .addComponent(jLabel1)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jRadioButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jRadioButton2))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField2)
+                                        .addComponent(jPasswordField2)
+                                        .addComponent(jPasswordField1)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)))
-                .addContainerGap())
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)
+                        .addGap(13, 13, 13))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,9 +166,12 @@ public class Signup extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -163,13 +182,29 @@ public class Signup extends javax.swing.JPanel {
         this.jPasswordField2.setText("");
         this.jRadioButton1.setSelected(true);
         this.jRadioButton2.setSelected(false);
-    }//GEN-LAST:event_jButton1MouseClicked
+}//GEN-LAST:event_jButton1MouseClicked
 
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    /**
+    * @param args the command line arguments
+    */
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new SignupScreen().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
