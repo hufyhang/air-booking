@@ -1,15 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
- * WelcomeScreen.java
- *
- * Created on Oct 14, 2009, 6:09:32 PM
- */
 
 package view;
+
+import model.UserModel;
 
 /**
  *
@@ -81,6 +73,11 @@ public class WelcomeScreen extends javax.swing.JFrame {
 
         jButton1.setText("Login");
         jButton1.setName("login"); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         jButton2.setText("Reset");
         jButton2.setName("clear"); // NOI18N
@@ -157,34 +154,32 @@ public class WelcomeScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        // TODO add your handling code here:
         System.exit(0);
 }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
 }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        // TODO add your handling code here:
-        view.MainUI mainUI = new view.MainUI(new view.SignupScreen());
+        new ucm.UCDisplayUI().run(new view.SignupScreen());
+        this.dispose();
 }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        // TODO add your handling code here:
         this.jTextField1.setText("");
         this.jPasswordField1.setText("");
 }//GEN-LAST:event_jButton2MouseClicked
 
-    /**
-    * @param args the command line arguments
-    */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new WelcomeScreen().setVisible(true);
-            }
-        });
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        new ucm.UCLoginUser(this).run();
+//        this.dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    public UserModel getUserModel() {
+        UserModel user = new UserModel();
+        user.setUsername(this.jTextField1.getText());
+        user.setPassword(this.jPasswordField1.getPassword().toString());
+        return user;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
