@@ -45,6 +45,7 @@ public class SignupScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton2.setText("Submit");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -52,15 +53,20 @@ public class SignupScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel5.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel5.setText("E-mail:");
 
-        jLabel6.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel6.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel6.setText("Gender:");
 
-        jLabel3.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel3.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel3.setText("Password:");
 
+        jTextField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+
+        jPasswordField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton1.setText("Clear");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -68,19 +74,24 @@ public class SignupScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14));
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setText("Create an account...");
 
         buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jRadioButton2.setText("Female");
 
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("Male");
 
-        jLabel2.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel2.setText("Username:");
 
+        jTextField2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+
+        jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton3.setText("Cancel");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -88,9 +99,10 @@ public class SignupScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel7.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel7.setText("Role:");
 
+        jComboBox1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "User", "Manager", "Administrator" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -115,10 +127,10 @@ public class SignupScreen extends javax.swing.JFrame {
                                 .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jRadioButton2))
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, 259, Short.MAX_VALUE)))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, 250, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
