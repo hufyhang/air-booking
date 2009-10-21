@@ -53,44 +53,44 @@ public class BookingScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextField2.setEditable(false);
-        jTextField2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jTextField2.setText("jTextField2");
 
         jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jTextField1.setText("jTextField1");
 
-        jLabel10.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel10.setText("GST:");
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        jLabel9.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel9.setText("Airport Tax:");
 
         jLabel7.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel7.setText("Number of adults:");
 
-        jLabel8.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel8.setText("Number of children:");
 
-        jComboBox4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jComboBox4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "First Class", "Business Class", "Economy Class" }));
 
         jTextArea1.setColumns(20);
         jTextArea1.setEditable(false);
-        jTextArea1.setFont(new java.awt.Font("Microsoft YaHei", 0, 13)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Microsoft YaHei", 0, 13));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel11.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel11.setText("Promotion:");
 
-        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jButton1.setText("Reset");
 
-        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jButton2.setText("Confirm");
 
         jSpinner1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
@@ -107,38 +107,38 @@ public class BookingScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel12.setText("Total cost:");
 
         jTextField3.setEditable(false);
-        jTextField3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jTextField3.setText("jTextField3");
 
-        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel2.setText("Destination:");
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel1.setText("Departure:");
 
-        jLabel5.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel5.setText("Class:");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18));
         jLabel3.setText("Air Tickets Booking");
 
-        jComboBox2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jComboBox2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jComboBox3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel4.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel4.setText("Available Date:");
 
-        jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jButton3.setText("Cancel");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,9 +174,9 @@ public class BookingScreen extends javax.swing.JFrame {
                                     .addComponent(jLabel8))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSpinner2, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                                    .addComponent(jSpinner1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jSpinner2, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                                    .addComponent(jSpinner1, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,7 +193,8 @@ public class BookingScreen extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))))
+                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)))
+                        .addGap(11, 11, 11))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
@@ -216,36 +217,33 @@ public class BookingScreen extends javax.swing.JFrame {
                     .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(13, 13, 13)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
-                        .addContainerGap(14, Short.MAX_VALUE))
+                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)))
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
@@ -261,8 +259,8 @@ public class BookingScreen extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
 
         pack();
