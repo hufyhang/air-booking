@@ -1,5 +1,12 @@
 #HANG Feifei's work log.
 
+=12.34AM, Oct 21, 2009=
+0. Connected project with MySQL database successfully.
+
+1. Debugged on parts of minor errors.
+
+_Update by: HANG Feifei_
+
 = 18.27PM, 10/14/2009 =
 0. Replace all JPanel extended class with JFrame to enable API of dispose().
 
