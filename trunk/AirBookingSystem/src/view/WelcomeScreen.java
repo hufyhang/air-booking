@@ -38,12 +38,13 @@ public class WelcomeScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel2.setText("Username:");
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18));
         jLabel1.setText("Welcome to Air-Booking System");
 
+        jButton4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton4.setText("Exit");
         jButton4.setName("exit"); // NOI18N
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -57,6 +58,7 @@ public class WelcomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton3.setText("Sign up");
         jButton3.setName("signup"); // NOI18N
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -65,12 +67,16 @@ public class WelcomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jLabel4.setText("If you are not a current user, please click \"Sign up\" to register.");
 
+        jTextField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jTextField1.setName("username"); // NOI18N
 
+        jPasswordField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jPasswordField1.setName("password"); // NOI18N
 
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton1.setText("Login");
         jButton1.setName("login"); // NOI18N
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -79,6 +85,7 @@ public class WelcomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton2.setText("Reset");
         jButton2.setName("clear"); // NOI18N
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -87,7 +94,7 @@ public class WelcomeScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("宋体", 0, 18));
+        jLabel3.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel3.setText("Password:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -103,21 +110,21 @@ public class WelcomeScreen extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 166, Short.MAX_VALUE)
                                 .addComponent(jButton2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton1))
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))))
+                            .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(268, Short.MAX_VALUE)
+                .addContainerGap(270, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)

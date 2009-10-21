@@ -34,14 +34,15 @@ public class AdministratorScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18));
         jLabel1.setText("Administrator");
 
-        jLabel2.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel2.setText("User Name:");
 
-        jTextField1.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
 
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton1.setText("Delete!!!");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -49,6 +50,7 @@ public class AdministratorScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton2.setText("Cancel");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -74,7 +76,7 @@ public class AdministratorScreen extends javax.swing.JFrame {
                                 .addComponent(jButton1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2))
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE))))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -94,7 +96,7 @@ public class AdministratorScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();

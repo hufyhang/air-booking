@@ -35,8 +35,9 @@ public class UserHomeScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setText("Welcome,");
+        jLabel1.setText("Welcome!!!");
 
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton1.setText("Book tickets");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -44,6 +45,7 @@ public class UserHomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton2.setText("Log off");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -51,11 +53,13 @@ public class UserHomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton3.setText("Edit");
 
+        jButton4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jButton4.setText("Airplanes Information");
 
-        jLabel2.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jLabel2.setText("Confirmed Booking");
 
         jTextArea1.setColumns(20);
@@ -75,7 +79,7 @@ public class UserHomeScreen extends javax.swing.JFrame {
                     .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
@@ -103,7 +107,7 @@ public class UserHomeScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -112,7 +116,7 @@ public class UserHomeScreen extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         new ucm.UCDisplayUI().run(new view.BookingScreen());
-//        this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
