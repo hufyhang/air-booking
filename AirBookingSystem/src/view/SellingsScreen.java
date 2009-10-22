@@ -1,16 +1,22 @@
 
 package view;
 
+import model.DatabaseModel;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+
 /**
  *
  * @author HANG Feifei
  */
-public class UserHomeScreen extends javax.swing.JFrame {
+public class SellingsScreen extends javax.swing.JFrame {
 
-    /** Creates new form UserHomeScreen */
-    public UserHomeScreen() {
-        super("Welcome back!");
+    /** Creates new form SellingsScreen */
+    public SellingsScreen() {
+        super("Sellings...");
         initComponents();
+        initialInformation();
     }
 
     /** This method is called from within the constructor to
@@ -22,20 +28,23 @@ public class UserHomeScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18));
-        jLabel1.setText("Welcome!!!");
+        jTextArea1.setBackground(java.awt.Color.black);
+        jTextArea1.setColumns(20);
+        jTextArea1.setEditable(false);
+        jTextArea1.setFont(new java.awt.Font("Microsoft YaHei", 0, 13)); // NOI18N
+        jTextArea1.setForeground(java.awt.Color.green);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
-        jButton1.setText("Book tickets");
+        jButton1.setText("Close");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -43,21 +52,10 @@ public class UserHomeScreen extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
-        jButton2.setText("Log off");
+        jButton2.setText("Reload");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
-            }
-        });
-
-        jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
-        jButton3.setText("Edit");
-
-        jButton4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
-        jButton4.setText("Airplanes Information");
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
             }
         });
 
@@ -65,36 +63,27 @@ public class UserHomeScreen extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 461, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton4)
+                        .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 253, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(8, 8, 8)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton4))
+                    .addComponent(jButton2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -102,27 +91,42 @@ public class UserHomeScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        new ucm.UCDisplayUI().run(new view.BookingScreen());
-        new ucm.UCDisplayUI().run(new view.TicketsScreen());
         this.dispose();
-    }//GEN-LAST:event_jButton1MouseClicked
+}//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        new ucm.UCDisplayUI().run(new view.WelcomeScreen());
-        this.dispose();
-    }//GEN-LAST:event_jButton2MouseClicked
+        initialInformation();
+}//GEN-LAST:event_jButton2MouseClicked
 
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        new ucm.UCDisplayUI().run(new view.TicketsScreen());
-    }//GEN-LAST:event_jButton4MouseClicked
+    protected void initialInformation() {
+        Connection con = DatabaseModel.getInstance().getConnection();
+        try{
+            Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
+            ResultSet result = stmt.executeQuery("SELECT * FROM sellings");
+            this.jTextArea1.setText("   Flight\tClass\tTickets\tCost\n");
+            this.jTextArea1.append("========================================\n");
+            result.first();
+            do{
+                String[] temp = result.getString("class").split(" ");
+                this.jTextArea1.append(result.getString("flightID"));
+                this.jTextArea1.append("\t");
+                this.jTextArea1.append(temp[0]);
+                this.jTextArea1.append("\t");
+                this.jTextArea1.append(result.getString("tickets"));
+                this.jTextArea1.append("\t");
+                this.jTextArea1.append(result.getString("cost"));
+                this.jTextArea1.append("\n");
 
+            }while(result.next());
+        }catch(Exception exp) {
+            exp.printStackTrace();
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 
 }

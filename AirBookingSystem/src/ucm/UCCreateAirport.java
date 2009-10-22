@@ -1,9 +1,9 @@
 
 package ucm;
 
-import model.UserModel;
+import model.AirportModel;
 import model.DatabaseModel;
-import view.AdministratorScreen;
+import view.AirportScreen;
 
 import javax.swing.*;
 import java.sql.Connection;
@@ -14,27 +14,27 @@ import java.sql.ResultSet;
  *
  * @author HANG Feifei
  */
-public class UCCreateManager implements UCController {
-    private UserModel user;
+public class UCCreateAirport implements UCController {
+    private AirportModel airport;
 
-    public UCCreateManager() {
-        user = new UserModel("", "", "", "", "");
+    public UCCreateAirport() {
+        airport = new AirportModel();
     }
 
-    public UCCreateManager(UserModel user) {
-        this.user = user;
+    public UCCreateAirport(AirportModel airport) {
+        this.airport = airport;
     }
 
-    public UCCreateManager(AdministratorScreen admin) {
-        this.user = admin.getUserModel();
+    public UCCreateAirport(AirportScreen air) {
+        this.airport = air.getAirportModel();
     }
 
     public boolean run() {
         boolean success = false;
-        if(!validUser()) {
-            if(createManager()) {
+        if(!validAirport()){
+            if(createAirport()) {
                 JOptionPane.showMessageDialog(new JFrame(),
-                        "Manager account has been created.",
+                        "New airport information has been uploaded.",
                         "Message",
                         JOptionPane.INFORMATION_MESSAGE);
                     success = true;
@@ -46,9 +46,9 @@ public class UCCreateManager implements UCController {
             }
         } else {
             JOptionPane.showMessageDialog(new JFrame(),
-                    "User exists already. Try again.",
-                    "Error Message",
-                    JOptionPane.ERROR_MESSAGE);
+                        "Airport exists already. Try again.",
+                        "Error Message",
+                        JOptionPane.ERROR_MESSAGE);
         }
         return success;
     }
@@ -57,38 +57,36 @@ public class UCCreateManager implements UCController {
         return true;
     }
 
-    protected boolean validUser() {
+    protected boolean validAirport() {
         boolean correct = false;
-        String username = user.getUsername();
+        String airportName = airport.getAirport();
 
         Connection con = DatabaseModel.getInstance().getConnection();
 
         try {
             Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
-            ResultSet result = stmt.executeQuery("SELECT * FROM users WHERE " + "username = '" + username + "'");
-            correct = result.first() && username.equals(result.getString("username"));
+            ResultSet result = stmt.executeQuery("SELECT * FROM airports WHERE " + "airport = '" + airportName + "'");
+            correct = result.first() && airportName.equals(result.getString("airport"));
         } catch (Exception exp) {
             exp.printStackTrace();
         }
         return correct;
     }
 
-    protected boolean createManager() {
+    protected boolean createAirport() {
         boolean correct = false;
-        String username = user.getUsername();
-        String password = user.getPassword();
-        String gender = "N/A";
-        String email = user.getEmail();
-        String role = "manager";
-        
+        String airportName = airport.getAirport();
+        double tax = airport.getTax();
+        double gst = airport.getGst();
         Connection con = DatabaseModel.getInstance().getConnection();
         try {
             Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
-            stmt.executeUpdate("INSERT INTO users VALUES ('" + username + "','" + password + "','" + email + "','" + gender + "','" + role + "')");
+            stmt.executeUpdate("INSERT INTO airports VALUES ('" + airportName + "','" + tax + "','"+ gst + "')");
             correct = true;
         } catch (Exception exp) {
             exp.printStackTrace();
         }
         return correct;
     }
+
 }

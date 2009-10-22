@@ -52,12 +52,12 @@ public class AdministratorScreen extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18));
         jLabel1.setText("Administrator");
 
-        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel2.setText("User Name:");
 
         jTextField1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jButton1.setText("Delete");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -65,7 +65,7 @@ public class AdministratorScreen extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jButton2.setText("Cancel");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -73,7 +73,7 @@ public class AdministratorScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel4.setText("Managers:");
 
         jComboBox1.addItemListener(new java.awt.event.ItemListener() {
@@ -82,10 +82,10 @@ public class AdministratorScreen extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel5.setText("Password:");
 
-        jLabel6.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Microsoft YaHei", 0, 18));
         jLabel6.setText("E-Mail:");
 
         jButton3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
@@ -97,7 +97,12 @@ public class AdministratorScreen extends javax.swing.JFrame {
         });
 
         jButton4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
-        jButton4.setText("Save");
+        jButton4.setText("Reset");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,8 +111,8 @@ public class AdministratorScreen extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -118,14 +123,14 @@ public class AdministratorScreen extends javax.swing.JFrame {
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, 234, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)))
+                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, 0, 233, Short.MAX_VALUE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -164,9 +169,9 @@ public class AdministratorScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton3)
+                    .addComponent(jButton1)
                     .addComponent(jButton4)
-                    .addComponent(jButton1))
+                    .addComponent(jButton3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -196,8 +201,8 @@ public class AdministratorScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        new ucm.UCDeleteUser(this).run();
-        initialManagers();
+        if(new ucm.UCDeleteUser(this).run())
+            initialManagers();
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
@@ -222,6 +227,11 @@ public class AdministratorScreen extends javax.swing.JFrame {
         if(new ucm.UCCreateManager(this).run())
             this.initialManagers();
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        new ucm.UCDisplayUI().run(new view.AdministratorScreen());
+        this.dispose();
+    }//GEN-LAST:event_jButton4MouseClicked
 
     public UserModel getUserModel() {
         UserModel user = new UserModel();
