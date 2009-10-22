@@ -58,6 +58,7 @@ public class UCLoginUser implements UCController {
                     break;
 
                 case 1:
+                    new ucm.UCDisplayUI().run(new view.ManagerHomeScreen());
                     break;
 
                 case 2:
