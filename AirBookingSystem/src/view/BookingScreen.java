@@ -79,7 +79,7 @@ public class BookingScreen extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jLabel7.setText("Number of tickets:");
 
-        jComboBox4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jComboBox4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "First Class", "Business Class", "Economy Class" }));
         jComboBox4.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -97,7 +97,7 @@ public class BookingScreen extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jLabel11.setText("Promotion:");
 
-        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jButton2.setText("Confirm");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -105,7 +105,7 @@ public class BookingScreen extends javax.swing.JFrame {
             }
         });
 
-        jSpinner1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jSpinner1.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
         jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -117,7 +117,7 @@ public class BookingScreen extends javax.swing.JFrame {
         jLabel12.setText("Total cost:");
 
         jTextField3.setEditable(false);
-        jTextField3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
         jTextField3.setText("0.00");
 
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
@@ -132,7 +132,7 @@ public class BookingScreen extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18));
         jLabel3.setText("Air Tickets Booking");
 
-        jComboBox2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
+        jComboBox2.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "JiNan", "ZhengZhou", "NanJing" }));
         jComboBox2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -148,10 +148,15 @@ public class BookingScreen extends javax.swing.JFrame {
             }
         });
 
-        jComboBox3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
+        jComboBox3.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         jComboBox3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jComboBox3MouseClicked(evt);
+            }
+        });
+        jComboBox3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox3ItemStateChanged(evt);
             }
         });
 
@@ -170,7 +175,7 @@ public class BookingScreen extends javax.swing.JFrame {
         jLabel6.setText("Flight ID:");
 
         jTextField4.setEditable(false);
-        jTextField4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
+        jTextField4.setFont(new java.awt.Font("Microsoft YaHei", 0, 12));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -317,7 +322,8 @@ public class BookingScreen extends javax.swing.JFrame {
         } catch (Exception exp) {
             exp.printStackTrace();
         }
-        this.jComboBox3.setSelectedItem(null);
+        this.jComboBox3.setSelectedIndex(0);
+        collectID();
     }//GEN-LAST:event_jComboBox2ItemStateChanged
 
     private void jComboBox3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox3MouseClicked
@@ -340,8 +346,12 @@ public class BookingScreen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2MouseClicked
 
+    private void jComboBox3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox3ItemStateChanged
+        collectID();
+        this.jTextField3.setText(new ucm.UCComputeCost(this).toString());
+    }//GEN-LAST:event_jComboBox3ItemStateChanged
+
     protected void collectID() {
-        this.jTextField4.setText("");
         int promotion = 0;
         double discount = 0;
         Connection con = DatabaseModel.getInstance().getConnection();
@@ -351,11 +361,9 @@ public class BookingScreen extends javax.swing.JFrame {
                     "' AND destination='" + this.jComboBox2.getSelectedItem().toString() +
                     "' AND date='" + this.jComboBox3.getSelectedItem().toString() + "'");
             result.first();
-            do{
-                this.jTextField4.setText(result.getString("id"));
-                promotion = Integer.parseInt(result.getString("promotion"));
-                discount = Double.parseDouble(result.getString("discount"));
-            }while(result.next());
+            this.jTextField4.setText(result.getString("id"));
+            promotion = Integer.parseInt(result.getString("promotion"));
+            discount = Double.parseDouble(result.getString("discount"));
         } catch (Exception exp) {
             exp.printStackTrace();
         }
