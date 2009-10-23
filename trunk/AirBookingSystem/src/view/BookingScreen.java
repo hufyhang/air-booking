@@ -300,7 +300,7 @@ public class BookingScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
-        this.computeCost();
+        this.jTextField3.setText(new ucm.UCComputeCost(this).toString());
     }//GEN-LAST:event_jSpinner1StateChanged
 
     private void jComboBox2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox2ItemStateChanged
@@ -322,7 +322,7 @@ public class BookingScreen extends javax.swing.JFrame {
 
     private void jComboBox3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox3MouseClicked
         collectID();
-        this.computeCost();
+        this.jTextField3.setText(new ucm.UCComputeCost(this).toString());
     }//GEN-LAST:event_jComboBox3MouseClicked
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
@@ -330,7 +330,7 @@ public class BookingScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void jComboBox4ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox4ItemStateChanged
-        this.computeCost();
+        this.jTextField3.setText(new ucm.UCComputeCost(this).toString());
     }//GEN-LAST:event_jComboBox4ItemStateChanged
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -362,78 +362,6 @@ public class BookingScreen extends javax.swing.JFrame {
         this.jTextArea1.setText("Buy " + promotion + " tickets to get a " + discount * 100 + "% discount.");
     }
 
-    protected void computeCost() {
-        double perCost = 0.00;
-        int number = Integer.parseInt(this.jSpinner1.getValue().toString());
-        double tax = Double.parseDouble(this.jTextField1.getText());
-        double gst = Double.parseDouble(this.jTextField2.getText());
-
-        int promotion = 0;
-        double discount = 1.00;
-
-        Connection con = DatabaseModel.getInstance().getConnection();
-        ResultSet result;
-        switch(this.jComboBox4.getSelectedIndex()){
-            case 0:
-               try{
-                   Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
-                   result = stmt.executeQuery("SELECT * FROM tickets WHERE id='" + this.jTextField4.getText() + "'");
-                   result.first();
-                   perCost = Double.parseDouble(result.getString("firstClassFee"));
-                } catch (Exception exp) {
-                    exp.printStackTrace();
-                }
-                break;
-            case 1:
-               try{
-                   Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
-                   result = stmt.executeQuery("SELECT * FROM tickets WHERE id='" + this.jTextField4.getText() + "'");
-                   result.first();
-                   perCost = Double.parseDouble(result.getString("bizClassFee"));
-                } catch (Exception exp) {
-                    exp.printStackTrace();
-                }
-                break;
-            case 2:
-                try{
-                    Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
-                    result = stmt.executeQuery("SELECT * FROM tickets WHERE id='" + this.jTextField4.getText() + "'");
-                    result.first();
-                    perCost = Double.parseDouble(result.getString("econClassFee"));
-                } catch (Exception exp) {
-                    exp.printStackTrace();
-                }
-                break;
-            default:
-                try{
-                    Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
-                    result = stmt.executeQuery("SELECT * FROM tickets WHERE id='" + this.jTextField4.getText() + "'");
-                    result.first();
-                    perCost = Double.parseDouble(result.getString("firstClassFee"));
-                } catch (Exception exp) {
-                    exp.printStackTrace();
-                }
-                break;
-        }
-
-        try{
-            Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
-            result = stmt.executeQuery("SELECT * FROM tickets WHERE id='" + this.jTextField4.getText() + "'");
-            result.first();
-            promotion = Integer.parseInt(result.getString("promotion"));
-            discount = Double.parseDouble(result.getString("discount"));
-        }catch(Exception exp) {
-            exp.printStackTrace();
-        }
-        
-        double fee = perCost*number*tax + perCost*number*gst + perCost*number;
-        if(number >= promotion)
-            fee *= discount;
-        
-        this.jTextField3.setText(String.valueOf(fee));
-
-    }
-
     protected void collectAirportInfo(){
         this.jTextField1.setText("");
         this.jTextField2.setText("");
@@ -452,9 +380,39 @@ public class BookingScreen extends javax.swing.JFrame {
     public TicketModel getTicketModel() {
         TicketModel ticket = new TicketModel();
         ticket.setFlightID(this.jTextField4.getText());
-        ticket.setFlightClass(this.jComboBox4.getSelectedItem().toString());
         ticket.setTickets(Integer.parseInt(this.jSpinner1.getValue().toString()));
         ticket.setCost(Double.parseDouble(this.jTextField3.getText()));
+        ticket.setTax(Double.parseDouble(this.jTextField1.getText()));
+        ticket.setGst(Double.parseDouble(this.jTextField2.getText()));
+
+        switch( this.jComboBox4.getSelectedIndex() ) {
+            case 0:
+                ticket.setFlightClass("firstClassFee");
+                break;
+
+            case 1:
+                ticket.setFlightClass("bizClassFee");
+                break;
+
+            case 2:
+                ticket.setFlightClass("econClassFee");
+                break;
+
+            default:
+                ticket.setFlightClass("firstClassFee");
+                break;
+        }
+
+        Connection con = DatabaseModel.getInstance().getConnection();
+        try{
+            Statement stmt = con.createStatement(ResultSet.CONCUR_UPDATABLE, ResultSet.CONCUR_UPDATABLE);
+            ResultSet result = stmt.executeQuery("SELECT * FROM tickets WHERE id='" + this.jTextField4.getText() + "'");
+            result.first();
+            ticket.setPromotion(Integer.parseInt(result.getString("promotion")));
+            ticket.setDiscount(Double.parseDouble(result.getString("discount")));
+        }catch(Exception exp) {
+            exp.printStackTrace();
+        }
         return ticket;
     }
 

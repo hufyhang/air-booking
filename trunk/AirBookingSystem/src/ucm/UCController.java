@@ -8,4 +8,5 @@ package ucm;
 public interface UCController {
     boolean run();
     boolean run(javax.swing.JFrame frame);
+    String toString();
 }
