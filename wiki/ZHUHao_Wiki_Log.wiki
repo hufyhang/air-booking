@@ -8,6 +8,14 @@
 
 Air-Booking System:
 
+1.Connected project with MySQL database successfully with 
+  HANG's help
+
+2.
+
+
+Air-Booking System:
+
 1.Several basic views has finished
 
 a.Welcome screen
