@@ -1,5 +1,5 @@
 #ZHUHao's Wiki log 
-= 20:00PM 10/14/2009 =
+= 13:00PM 10/21/2009 =
 
 
 
@@ -11,8 +11,14 @@ Air-Booking System:
 1.Connected project with MySQL database successfully with 
   HANG's help
 
-2.
+2.Testing the project.
 
+
+= 20:00PM 10/14/2009 =
+
+
+
+= Details =
 
 Air-Booking System:
 
