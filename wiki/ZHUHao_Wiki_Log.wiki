@@ -37,7 +37,11 @@ Updated by ZHUHao
 
 Air-Booking System:
 
-1.Several basic views has finished
+1.Write three usecases
+
+2.Finish the report of this project between 400 and 600 words.
+
+3.Several basic views has finished
 
 a.Welcome screen
 
@@ -45,6 +49,6 @@ b.Sign-up screen
 
 c.Booking screen
 
-d.Testing program
+4.Testing program
 
 Updated by ZHUHao
