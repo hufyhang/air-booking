@@ -43,11 +43,11 @@ Air-Booking System:
 
 3.Several basic views has finished
 
-a.Welcome screen
+  a.Welcome screen
 
-b.Sign-up screen
+  b.Sign-up screen
 
-c.Booking screen
+  c.Booking screen
 
 4.Testing program
 
