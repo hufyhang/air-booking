@@ -1,4 +1,18 @@
 #ZHUHao's Wiki log 
+= 14:00PM 10/27/2009 =
+
+
+
+= Detail =
+
+Air-Booking System
+
+1.Write three usecases and comments into source codes.
+
+2.Testing the project.
+
+Updated by ZHUHao
+
 = 13:00PM 10/21/2009 =
 
 
