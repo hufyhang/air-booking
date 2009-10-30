@@ -1,12 +1,19 @@
 #ZHUHao's Wiki log 
-= Introduction =
+= 20:00PM 10/14/2009 =
 
 
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Air-Booking System:
+
+1.Several basic views has finished
+
+a.Welcome screen
+
+b.Sign-up screen
+
+c.Booking screen
+
+d.Testing program
